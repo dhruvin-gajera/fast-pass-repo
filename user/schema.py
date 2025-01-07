@@ -18,3 +18,15 @@ class GameCreate(BaseModel):
     max_participants: int
     stud_id: int
 
+class Login(BaseModel):
+    username: str
+    password: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    email: str | None = None
+    # scopes: list[str] = []
